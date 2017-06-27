@@ -1,0 +1,9 @@
+build
+coverage
+dist
+debug.log
+node_modules
+out-tsc
+
+dist/src
+all-bananas

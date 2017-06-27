@@ -1,0 +1,1 @@
+C:\Users\matt.fehskens\Projects\angular-librarian\commands\initial\templates\tasks/update-sourcemaps.js
