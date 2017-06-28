@@ -1,10 +1,10 @@
 build
 coverage
 dist
-npm-debug.log*
 debug.log
 node_modules
 out-tsc
 
+npm-debug.log*
 dist/src
 all-bananas
