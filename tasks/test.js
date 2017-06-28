@@ -10,7 +10,6 @@ function run(type) {
         process.exit(exitCode);
     });
 
-
     server.start();
 }
 
@@ -52,7 +51,7 @@ function getWatchConfig() {
 }
 
 const getAllConfig = (watch) => ({
-    configFile: path.resolve(__dirname, '../karma.conf.js'),
+    configFile: path.resolve(__dirname, '..', 'karma.conf.js'),
     webpack: require(path.resolve(__dirname, '..', 'webpack', 'webpack.test.js'))(watch),
 });
 

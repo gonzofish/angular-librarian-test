@@ -27,10 +27,8 @@ const replaceSource = (pattern, sourcePrefix) => {
             if (error) reject(Error);
 
             files.filter((name) => /\.ts$/.test(name)).forEach((filePath) => {
-                fs.readFile(filePath, 'utf8', (error, content) => {
-                    if (error) {
-                        reject(error);
-                    }
+                try {
+                    const content = fs.readFileSync(filePath, 'utf8');
 
                     let fileContents = inlineResourcesFromString(content, sourcePrefix, (url) =>
                         path.join(path.dirname(filePath), url)
@@ -43,8 +41,14 @@ const replaceSource = (pattern, sourcePrefix) => {
                         return match.replace(url, relativeUrl);
                     });
 
-                    fs.writeFile(filePath, fileContents);
-                });
+                    try {
+                        fs.writeFileSync(filePath, fileContents);
+                    } catch (writeError) {
+                        reject(writeError);
+                    }
+                } catch (readError) {
+                    reject(readError);
+                }
             });
 
             resolve();

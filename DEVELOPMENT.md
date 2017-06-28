@@ -104,7 +104,7 @@ published to NPM. The basic structure of a published library is:
    |__example.module.ts
    |__index.html
 |__src/
-   |__librarian-test.module.ts
+   |__angular-librarian-test.module.ts
    |__index.ts
 |__.npmignore
 |__index.ts
