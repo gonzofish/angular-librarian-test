@@ -5,8 +5,6 @@ import { FormControl } from '@angular/forms';
 
 import 'rxjs/add/operator/debounceTime';
 
-console.info('...');
-
 @Component({
     selector: 'hello-you',
     styleUrls: ['./hello-you.component.scss'],
