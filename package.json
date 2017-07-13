@@ -71,14 +71,13 @@
   },
   "jsnext:main": "./angular-librarian-test.js",
   "types": "./index.d.ts",
-  "dependencies": {
+  "peerDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.2.4",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
-    "angular-librarian": "^1.0.0-beta.5",
     "core-js": "^2.4.1",
     "rxjs": "^5.0.1",
     "zone.js": "^0.8.7"
