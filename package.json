@@ -69,8 +69,7 @@
     "webpack-merge": "^0.14.0",
     "webpack-node-externals": "^1.5.4"
   },
-  "jsnext:main": "./angular-librarian-test.js",
-  "types": "./index.d.ts",
+  "typings": "./index.d.ts",
   "peerDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
