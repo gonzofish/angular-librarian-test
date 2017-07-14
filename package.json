@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build",
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
     "tagVersion": "np --no-publish --no-cleanup",
-    "posttagVersion": "npm run build && cd ./dist && npm publish"
+    "posttagVersion": "npm run build && npm publish dist"
   },
   "keywords": [],
   "author": "",
