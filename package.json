@@ -82,7 +82,8 @@
     "zone.js": "^0.8.7"
   },
   "repository": {
-    "url": "https://github.com/gonzofish/librarian-test"
+    "url": "https://github.com/gonzofish/angular-librarian-test",
+    "type": "git"
   },
   "module": "./angular-librarian-test.es5.js",
   "es2015": "./angular-librarian-test.js"
