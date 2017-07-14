@@ -4,7 +4,7 @@
   "description": "Test, an Angular library",
   "main": "./bundles/angular-librarian-test.umd.js",
   "scripts": {
-    "test": "node ../tasks/test",
+    "test": "node ./tasks/test",
     "build": "node ./tasks/build",
     "build:aot": "npm run build:es2015 && npm run build:es5",
     "build:copy": "node ./tasks/copy-build && node ./tasks/inline-resources",
