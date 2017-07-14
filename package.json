@@ -15,10 +15,10 @@
     "lint": "tslint ./src/**/*.ts",
     "postbuild": "rimraf build",
     "prebuild": "rimraf dist out-tsc",
-    "prepublishOnly": "npm run build && cd ./dist",
+    "prepublishOnly": "npm run build",
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
     "tagVersion": "np --no-publish --no-cleanup",
-    "posttagVersion": "npm publish dist"
+    "posttagVersion": "npm run build && cd ./dist && npm publish"
   },
   "keywords": [],
   "author": "",
