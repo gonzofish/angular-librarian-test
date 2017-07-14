@@ -1,10 +1,10 @@
 {
   "name": "angular-librarian-test",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Test, an Angular library",
   "main": "./bundles/angular-librarian-test.umd.js",
   "scripts": {
-    "test": "node ./tasks/test",
+    "test": "node ../tasks/test",
     "build": "node ./tasks/build",
     "build:aot": "npm run build:es2015 && npm run build:es5",
     "build:copy": "node ./tasks/copy-build && node ./tasks/inline-resources",
@@ -15,9 +15,9 @@
     "lint": "tslint ./src/**/*.ts",
     "postbuild": "rimraf build",
     "prebuild": "rimraf dist out-tsc",
-    "pretagVersion": "npm run build",
+    "prepublish": "npm run build && cd dist",
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
-    "tagVersion": "cd dist && np"
+    "tagVersion": "np"
   },
   "keywords": [],
   "author": "",
