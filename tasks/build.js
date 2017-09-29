@@ -2,6 +2,7 @@
 
 const fs = require('fs-extra');
 const ngc = require('@angular/compiler-cli/src/main').main;
+const librarianUtils = require('angular-librarian/commands/utilities');
 const path = require('path');
 
 const copyGlobs = require('./copy-globs');
@@ -9,6 +10,7 @@ const copyToBuild = require('./copy-build');
 const inlineResources = require('./inline-resources');
 const rollup = require('./rollup');
 
+const colorize = librarianUtils.colorize;
 const rootDir = path.resolve(__dirname, '..');
 const buildDir = path.resolve(rootDir, 'build');
 const distDir = path.resolve(rootDir, 'dist');
@@ -20,28 +22,14 @@ const es2015Dir = path.resolve(tscDir, 'lib-es2015');
 
 const runPromise = (message, fn) => {
     return function() {
-        console.info(colorize(message, 'cyan'));
+        console.info(colorize.colorize(message, 'cyan'));
         return fn().then(complete);
     };
-};
-const colorize = (text, color) => {
-    const colorMap = {
-        blue: 34,
-        cyan: 36,
-        green: 32,
-        red: 31,
-        reset: 0,
-        yellow: 33
-    };
-
-    color = color in colorMap ? colorMap[color] : colorMap.reset;
-
-    return `\x1b[${ color }m${ text }\x1b[${ colorMap.reset }m`;
 };
 
 const complete = (depth = 0) => {
     const spaces = ' '.repeat(depth);
-    console.info(colorize(`${ spaces }> Complete`, 'green'));
+    console.info(colorize.colorize(`${ spaces }> Complete`, 'green'));
 };
 const compileCode = () => Promise.all([2015, 5].map((type) =>
     ngc({ project: path.resolve(rootDir, `tsconfig.es${ type }.json`)})
