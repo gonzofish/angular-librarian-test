@@ -21,7 +21,7 @@ module.exports = (type) => {
                 resolve();
             }
         } catch (error) {
-            console.info(error.message);
+            process.stderr.write(error.message);
             reject(error.message);
             process.exit(1);
         }
