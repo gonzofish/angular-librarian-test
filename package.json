@@ -21,7 +21,7 @@
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
-    "angular-librarian": "git+https://github.com/gonzofish/angular-librarian.git#2286756",
+    "angular-librarian": "git+https://github.com/gonzofish/angular-librarian.git#95eb2bf",
     "angular2-template-loader": "0.6.0",
     "awesome-typescript-loader": "^3.0.0",
     "codelyzer": "~3.0.0",
