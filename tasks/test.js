@@ -5,12 +5,18 @@ const path = require('path');
 const Server = require('karma').Server;
 
 function run(type) {
-    const config = getConfig(type);
-    const server = new Server(config, function(exitCode) {
-        process.exit(exitCode);
-    });
+    return new Promise((resolve, reject) => {
+        const config = getConfig(type);
+        const server = new Server(config, function(exitCode) {
+            if (exitCode === 0) {
+                resolve();
+            } else {
+                reject(exitCode);
+            }
+        });
 
-    server.start();
+        server.start();
+    });
 }
 
 function getConfig(type) {
@@ -62,5 +68,7 @@ const getAllConfig = (watch) => ({
 module.exports = run;
 
 if (!module.parent) {
-    run(process.argv[2]);
+    run(process.argv[2])
+        .then(() => process.exit(0))
+        .catch((errorCode) => process.exit(errorCode));
 }
