@@ -8,7 +8,6 @@
     "g": "node ./node_modules/angular-librarian",
     "lint": "tslint ./src/**/*.ts",
     "postbuild": "rimraf build",
-    "posttagVersion": "npm run build && npm publish dist",
     "prebuild": "rimraf dist out-tsc",
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
     "tagVersion": "node ./tasks/tag-version",
