@@ -14,6 +14,18 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceRoot}/node_modules/angular-librarian/index.js"
+        },
+        {
+            "args": [
+                "--no-publish",
+                "--no-cleanup"
+            ],
+            "cwd": "${workspaceRoot}",
+            "console": "internalConsole",
+            "type": "node",
+            "request": "launch",
+            "name": "Publish",
+            "program": "${workspaceRoot}/node_modules/.bin/np"
         }
     ]
 }
