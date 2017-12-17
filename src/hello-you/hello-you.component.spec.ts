@@ -26,6 +26,6 @@ describe('HelloYouComponent', () => {
     });
 
     it('should create the hello-you', () => {
-        expect(component).not.toBeTruthy();
+        expect(component).toBeTruthy();
     });
 });
