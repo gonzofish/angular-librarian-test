@@ -10,7 +10,7 @@
     "postbuild": "rimraf build",
     "prebuild": "rimraf dist out-tsc",
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
-    "tagVersion": "node ./tasks/tag-version",
+    "tagVersion": "np --no-publish --no-cleanup",
     "test": "node ./tasks/test"
   },
   "keywords": [],
@@ -42,6 +42,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.0",
     "node-sass": "^4.0.0",
+    "np": "^2.12.0",
     "phantomjs-prebuilt": "^2.1.7",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.3",
