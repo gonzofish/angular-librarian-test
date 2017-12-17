@@ -13,8 +13,6 @@ module.exports = (type) => {
                 { stdio: 'inherit' }
             );
 
-            console.info(output);
-
             if (output.error) {
                 throw output.error;
             } else if (output.status !== 0) {
