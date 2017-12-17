@@ -11,7 +11,7 @@
     "prebuild": "rimraf dist out-tsc",
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
     "tagVersion": "node ./tasks/tag-version",
-    "test": "karma start karma.temp.js"
+    "test": "node ./tasks/test"
   },
   "keywords": [],
   "author": "",
