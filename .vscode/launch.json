@@ -21,7 +21,7 @@
                 "--no-cleanup"
             ],
             "cwd": "${workspaceRoot}",
-            "console": "internalConsole",
+            "console": "externalTerminal",
             "type": "node",
             "request": "launch",
             "name": "Publish",
