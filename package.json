@@ -1,6 +1,6 @@
 {
   "name": "angular-librarian-test",
-  "version": "1.0.58",
+  "version": "1.0.59",
   "description": "Test, an Angular library",
   "main": "./bundles/angular-librarian-test.umd.js",
   "scripts": {
