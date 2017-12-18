@@ -10,7 +10,7 @@ function run(type) {
         process.exit(exitCode);
     });
 
-    return server.start();
+    server.start();
 }
 
 function getConfig(type) {
@@ -62,5 +62,5 @@ const getAllConfig = (watch) => ({
 module.exports = run;
 
 if (!module.parent) {
-    return run(process.argv[2]);
+    run(process.argv[2]);
 }
